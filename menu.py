@@ -48,45 +48,51 @@ def operacao():
         elif this.opcao == 3:
             print("Informe o nome")
             this.codigo=int(input())
-            print("informe o novo nome: ")
+            print("Informe o novo nome: ")
             this.campo = input()
             operacoes.atualizar(this.codigo, 'nome', this.campo)
         elif this.opcao == 4:
-            print("Informe o telefone")
+            print("Informe o código que deseja atualizar")
             this.codigo = int(input())
+            print("Informe o telefone")
             this.campo = input()
             operacoes.atualizar(this.codigo, 'telefone', this.campo)
         elif this.opcao == 5:
             print("Informe o código que deseja atualizar")
             this.codigo = int(input())
-            print("informe o novo endereço: ")
+            print("Informe o novo endereço: ")
             this.campo = input()
             operacoes.atualizar(this.codigo, 'endereco', this.campo)
         elif this.opcao == 6:
             print("Informe o código que deseja atualizar")
             this.codigo = int(input())
-            print("informe a nova data de nascimento: ")
+            print("Informe a nova data de nascimento: ")
             this.campo = input()
             operacoes.atualizar(this.codigo, 'dataDeNascimento', operacoes.tratarData(this.campo))
         elif this.opcao == 7:
              print("Informe o código que deseja atualizar")
              this.codigo = int(input())
+             print("Informe a nova dataDeBatismo:")
              operacoes.atualizar(this.codigo, 'dataDeBatismo', operacoes.tratarData(this.canpo))
         elif this.opcao == 8:
             print("Informe o código que deseja atualizar")
             this.codigo = int(input())
+            print("Informe nomeDoPastor: ")
             operacoes.atualizar(this.codigo, 'nomeDoPastor', operacoes.tratarData(this.campo))
         elif this.opcao == 9:
             print("Informe o código que deseja atualizar")
             this.codigo = int(input())
+            print("Informe o estadocivil: ")
             operacoes.atualizar(this.codigo, 'estadocivil', operacoes.tratarData(this.campo))
         elif this.opcao == 10:
             print("Informe o código que deseja atualizar")
             this.codigo = int(input())
+            print("Informe o nomeDaIgreja: ")
             operacoes.atualizar(this.codigo, 'nomeDaIgreja', operacoes.tratarData(this.campo))
         elif this.opcao == 11:
             print("Informe o código que deseja atualizar")
             this.codigo = int(input())
+            print("Informe o endereço: ")
             operacoes.atualizar(this.codigo, 'endereco', operacoes.tratarData(this.campo))
         elif this.opcao == 12:
             print("Informe o código para a exclusão do dado")

@@ -4,10 +4,10 @@ import conexao_Igreja_BD #Classe que faz a conexão com o banco de dados
 db_connection = conexao_Igreja_BD.conectar()
 con = db_connection.cursor()
 
-def inserir(nome, telefone, endereco, dataDeNascimento, igreja, pastor, estadocívil, batismo,):
+def inserir(nome, telefone, endereco, dataDeNascimento, igreja, pastor, estadocivil, batismo,):
     try:
-        sql = "insert into pessoa(codigo, nome, telefone, endereco, dataDeNascimento, igreja, pastor, estadocívil, batismo, dataDeNascimento) values('', '{}', '{}','{}', '{}',{})".format(
-            nome, telefone, endereco, tratarData(dataDeNascimento))
+        sql = "insert into pessoa(codigo, nome, telefone, endereco, dataDeNascimento, igreja, pastor, estadocívil, batismo, dataDeNascimento) values('', '{}', '{}','{}','{}',{},'{}','{}','{}','{}','{}', )".format(
+            nome, telefone, endereco, igreja, pastor, estadocivil, batismo, tratarData(dataDeNascimento))
         con.execute(sql)
         db_connection.commit()  # Inserção de dados no BD
         print("{} Inserido!".format(con.rowcount))
@@ -25,8 +25,8 @@ def consultar():
         sql = 'select * from pessoa'
         con.execute(sql)
 
-        for(codigo, nome, telefone, endereco,igreja,pastor,estadocívil,batismo,dataDeNascimento) in con:
-            print('Código: {}, Nome: {}, Telefone: {}, Endereço: {}, Data de Nascimento: {}'.format(codigo, nome, telefone, endereco, dataDeNascimento))
+        for(codigo, nome, telefone, endereco,igreja,pastor,estadocivil,batismo,dataDeNascimento) in con:
+            print('Código: {}, Nome: {}, Telefone: {}, endereço: {}, igreja: {}, pastor: {}, estadocivil: {}, bastismo: {}, Data de Nascimento: {}'.format(codigo, nome, telefone, endereco, igreja, pastor, estadocivil, batismo, dataDeNascimento))
         print('\n')
     except Exception as erro:
         print(erro)
